@@ -1,0 +1,2 @@
+cmd: glpsol -m model_file.mod -d data_file.dat
+comment: #

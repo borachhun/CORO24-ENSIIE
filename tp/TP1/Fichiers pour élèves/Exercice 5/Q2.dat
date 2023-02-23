@@ -1,0 +1,24 @@
+data;
+
+param p := 5;
+param m := 10;
+param M := 100;
+
+param u := 3;
+param N := 30;
+
+param In := 
+1 10
+2 10
+3 10
+4 10
+5 10;
+
+param Pr := 
+1 10
+2 20
+3 30
+4 40
+5 50;
+
+end;
