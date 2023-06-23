@@ -1,0 +1,63 @@
+data;
+
+
+param T := 5;
+set CONTRATS := NORVEGE RUSSIE;
+set ZONES := NORD SUD;
+set ARCS := NvS SvN ;
+
+# PARAM CONTRATS
+# --------------
+
+param EnlevementMax :   1  2  3  4  5:=
+             NORVEGE   10 10 10 10 10
+              RUSSIE   12 12 12 20 12;
+
+
+param EnlevementMin : 1 2 3 4 5:=
+            NORVEGE   2 2 2 2 2
+             RUSSIE   4 4 4 4 4;
+
+param Quota :=
+            NORVEGE  20
+			RUSSIE   60; 
+
+param ContratSplit : NORD SUD :=
+           NORVEGE     1    0
+	        RUSSIE   0.2  0.8;
+
+param PrixContrats :=
+	NORVEGE  10
+	RUSSIE   15;
+
+# PARAM RESEAU
+# ------------
+
+param : Orig Dest :=
+NvS     NORD  SUD 
+SvN     SUD  NORD; 
+
+param : TransMin TransMax :=
+NvS       2        3
+SvN       0        2 ;          
+
+param PrixTrans :=
+NvS      0.5
+SvN      0.5;
+
+# PARAM ZONES
+# -----------
+
+param Demande : 1    2    3   4    5:=
+		 NORD   12   8    4   5    11
+          SUD   25   15   15  10   7;
+
+param PrixEcartN :=
+NORD 2000
+SUD  2000;
+
+param PrixEcartP :=
+NORD 1500
+SUD  1500;
+
+end;

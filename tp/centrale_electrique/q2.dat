@@ -1,0 +1,28 @@
+data;
+
+param T := 8;
+param P := 4;
+
+param Palier :=
+1 0
+2 0.2
+3 0.5
+4 1;
+
+param Prix :=
+1 10
+2 20
+3 5
+4 4
+5 8
+6 12
+7 26
+8 23;
+
+param MaxCapacite := 10;
+
+param Cout := 40;
+
+param NbDemarrage := 2;
+
+end;
